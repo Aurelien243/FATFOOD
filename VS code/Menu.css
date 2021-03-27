@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    overflow-x: hidden;
+    background-image: url("Images/hamburger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1.875vw;
+    /*margin: -2%;
+    padding: 0%;*/
+}
+h2 {
+    text-align: center;
+    color: rgb(238, 163, 0);
+    font-size: 12.5vw;
+    padding-top: 7.8125vw;
+    font-family: Carter One;
+    text-shadow: rgb(255, 0, 0) 0.8125vw 0.8125vw;
+}
+conteneur {
+    display: flex;
+    justify-content: center;
+}
+conteneur img {
+    width: 71.875vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -15.625vw;
+    margin-top: 6.25vw;
+    text-align: center;
+    border: 0.8125vw solid rgb(238, 163, 0);
+    border-radius: 0.3125vw 0.3125vw;
+    box-shadow: rgb(255, 0, 0) 0.8125vw 0.8125vw;
+}
+
+footer div p a:hover{
+    text-decoration: underline;
+}
+footer div p {
+    padding-top: 5px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(238, 163, 0);
+    text-decoration: none;
+    text-shadow: rgb(255, 0, 0) 2px 2px;
+    font-family: Boogaloo;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(238, 163, 0);
+    text-shadow: rgb(255, 0, 0) 2px 2px;
+}
+footer h4{
+    margin-top: 300px;
+    font-size: 40px;
+    text-align: center;
+    font-family: Carter One;
+    color: rgb(238, 163, 0);
+    text-shadow: rgb(255, 0, 0) 4px 4px;
+}
+.container-corner {
+    position: absolute;
+    right: 2.5vw;
+    top: 2.5vw;
+}
+.btn-circle {
+    background: rgb(238, 163, 0);
+    display: block;
+    width: 5.625vw;
+    height: 5.625vw;
+    border-radius: 50%;
+    position: relative;
+    z-index: 15;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.125vw solid rgb(255, 0, 0);
+}
+
+.line {
+    width: 50%;
+    height: 0.1875vw;
+    background: rgb(255, 0, 0);
+    transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s;
+    position: relative;
+}
+.line:nth-child(1){
+    top: -0.625vw;
+}
+.line:nth-child(3){
+    top: 0.625vw;
+}
+.btn-circle.menu-anim .line:nth-child(1){
+    top: 0.1875vw;
+    transform: rotate(45deg);
+    transition: 
+    top 0.2s ease,
+    transform 0.2s ease 0.2s;
+}
+
+.btn-circle.menu-anim .line:nth-child(2){
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.btn-circle.menu-anim .line:nth-child(3){
+    top: -0.1875vw;
+    transform: rotate(-45deg);
+    transition: 
+    top 0.2s ease,
+    transform 0.2s ease 0.2s;
+}
+
+.circle-menu {
+    background: rgb(238, 163, 0);
+    width: 31.25vw;
+    height: 31.25vw;
+    border-radius: 50%;
+    border: 5.625vw solid rgba(255,255,255,0.239);
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease 0.5s;
+}
+
+.circle-menu.circle-anim {
+    transition: transform 0.4s ease 0.4s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.links-circle {
+    border-radius: 50%;
+    width: 5.625vw;
+    height: 5.625vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-circle img {
+    width: 5.625vw;
+    transition: transform 0.2s ease;
+}
+
+.links-circle img:hover {
+    transform: scale(1.2);
+}
+
+.links-circle:nth-child(1){
+    left: 0%;
+    transition: transform 0.2s ease 0.4s;
+}
+.links-circle:nth-child(2){
+    left: 15%;
+    top: 85%;
+    transition: transform 0.2s ease 0.2s;
+}
+.links-circle:nth-child(3){
+    top: 100%;
+    transition: transform 0.2s ease;
+}
+
+.circle-menu.circle-anim .links-circle:nth-child(1){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 0.7s;
+}
+.circle-menu.circle-anim .links-circle:nth-child(2){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 0.9s;
+}
+.circle-menu.circle-anim .links-circle:nth-child(3){
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease 1.1s;
+}
